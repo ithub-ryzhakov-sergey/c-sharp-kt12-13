@@ -1,0 +1,71 @@
+# Ignore course materials in src (docs/slides/etc.)
+/src/
+src/**
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio cache/options
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Mono
+*.pidb
+*.userprefs
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.snupkg
+.nuget/NuGet.Config
+.nuget/NuGet.exe
+.nuget/packages.config
+
+# Azure / Publish
+[Pp]ublish/[Pp]rofiles/
+**/Properties/PublishProfiles/
+*.pubxml
+*.publishsettings
+
+# Coverage / Test
+*.coverage
+*.coveragexml
+TestResult*/
+Coverage*/
+*.trx
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# StyleCop
+StyleCopReport.xml
+
+# Others
+*.Cache
+*.dbmdl
+*.bak
+*.orig
+*.rej
+
+# Local tooling
+.env
+.env.*
+
+# Rider solution caches
+/.idea/.idea.*
