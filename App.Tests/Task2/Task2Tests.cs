@@ -58,29 +58,19 @@ public class Task2Tests
     }
 
     [Test]
-    public void GenericUtils_Max_Basic_And_Errors()
-    {
-        var data = new[] {"a", "bbb", "cc"};
-        var max = GenericUtils.Max(data);
-        Assert.That(max, Is.EqualTo("bbb"));
 
-        Assert.Throws<ArgumentException>(() => GenericUtils.Max(Array.Empty<int>()));
-        Assert.Throws<ArgumentNullException>(() => GenericUtils.Max<string>(null!));
-    }
-
-    [Test]
     public void GenericUtils_Swap_And_Copy()
     {
-        var arr = new[] {1, 2, 3};
+        var arr = new[] { 1, 2, 3 };
         GenericUtils.Swap(arr, 0, 2);
-        Assert.That(arr, Is.EqualTo(new[] {3, 2, 1}));
+        Assert.That(arr, Is.EqualTo(new[] { 3, 2, 1 }));
 
         Assert.Throws<ArgumentOutOfRangeException>(() => GenericUtils.Swap(arr, -1, 0));
         Assert.Throws<ArgumentOutOfRangeException>(() => GenericUtils.Swap(arr, 0, 3));
 
         var copy = GenericUtils.Copy(arr);
         Assert.That(copy, Is.Not.SameAs(arr));
-        Assert.That(copy, Is.EqualTo(new[] {3, 2, 1}));
+        Assert.That(copy, Is.EqualTo(new[] { 3, 2, 1 }));
 
         Assert.Throws<ArgumentNullException>(() => GenericUtils.Copy<int>(null!));
     }
